@@ -20,7 +20,7 @@ DESC="dump1090 ADS-B decoder"
 NAME=dump1090
 PIDFILE=/var/run/$NAME.pid
 DAEMON=/usr/bin/daemon
-DAEMON_ARGS="--unsafe --pidfile $PIDFILE -- /usr/local/bin/dump1090 --net"
+DAEMON_ARGS="--unsafe --pidfile $PIDFILE --chdir=/usr/local/share/dump1090 -- /usr/local/bin/dump1090 --net --interactive-ttl 85"
 SCRIPTNAME=/etc/init.d/$NAME
 
 # Exit if the package is not installed
